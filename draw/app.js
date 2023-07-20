@@ -12,7 +12,7 @@ function onMove(event) {
   }
   ctx.moveTo(event.offsetX, event.offsetY);
 }
-function onMouseDown() {
+function startPainting() {
   isPainting = true;
 }
 function cancelPainting() {
@@ -20,6 +20,6 @@ function cancelPainting() {
 }
 
 canvas.addEventListener("mousemove", onMove);
-canvas.addEventListener("mousedown", onMouseDown);
+canvas.addEventListener("mousedown", startPainting);
 canvas.addEventListener("mouseup", cancelPainting);
 canvas.addEventListener("mouseleave", cancelPainting);
