@@ -15,10 +15,11 @@ function onMove(event) {
 function onMouseDown() {
   isPainting = true;
 }
-function onMouseUp() {
+function cancelPainting() {
   isPainting = false;
 }
 
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", onMouseDown);
-canvas.addEventListener("mouseup", onMouseUp);
+canvas.addEventListener("mouseup", cancelPainting);
+canvas.addEventListener("mouseleave", cancelPainting);
